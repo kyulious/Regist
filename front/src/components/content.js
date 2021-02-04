@@ -6,7 +6,7 @@ class Content extends Component {
     console.log("Content render")
     return (
       <div className="contents">
-        <h2> Articles</h2>
+        <h2 className="contents_head"> Articles</h2>
         <div className="list">
           <div>TIL</div>
           <div>JS</div>

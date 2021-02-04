@@ -16,28 +16,32 @@
 }
 
 .main {
-  height: 45rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  height: 100%;
 }
 .contents {
   display: block;
   float: left;
+  width: 80%;
   text-align: left;
+}
+.contents_head {
+  padding-left: 60px;
+}
+.list {
+  float: left;
+  padding-left: 100px;
+  width: 70%;
 }
 .contents .list div {
   margin-bottom: 40px;
-  width: 700px;
-  flex-shrink: 3;
+  width: 80%;
   border: 1px solid black;
 }
-.contents nav {
+.nav {
   display: block;
   float: left;
-  width: 5%;
+  width: 20%;
   margin-bottom: 40px;
-  text-align: center;
 }
 .footer {
   background-color: #d3e1ee;
@@ -45,9 +49,9 @@
   clear: both;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   height: 70px;
   bottom: 0;
-  justify-content: space-around;
   position: absolute;
   width: 100%;
 }
