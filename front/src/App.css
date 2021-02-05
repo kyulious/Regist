@@ -16,14 +16,10 @@
 }
 
 .main {
-<<<<<<< HEAD
-  height: 100%;
-=======
   height: 45rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
 #main_nav {
@@ -33,7 +29,6 @@
   text-align: left;
   flex: 0.5;
   border: 1px solid black;
->>>>>>> 5dc1c921a0c05bb3e6605186a5b266d0b3509b61
 }
 
 #main_content {
@@ -44,7 +39,6 @@
   text-align: left;
   flex: 2;
   border: 1px solid black;
-
 }
 .contents_head {
   padding-left: 60px;
@@ -59,16 +53,6 @@
   width: 80%;
   border: 1px solid black;
 }
-<<<<<<< HEAD
-.nav {
-  display: block;
-  float: left;
-  width: 20%;
-  margin-bottom: 40px;
-}
-=======
-
->>>>>>> 5dc1c921a0c05bb3e6605186a5b266d0b3509b61
 .footer {
   background-color: #d3e1ee;
   font-weight: 500;
@@ -82,18 +66,16 @@
   width: 100%;
 }
 
-.contentsAttend{
+.contentsAttend {
   border: 1px solid red;
   display: flex;
   flex-direction: row;
 }
 
-.attendTable{
+.attendTable {
   margin: 20px;
   border: 1px solid green;
 }
-
-
 
 ul {
   list-style: none;
