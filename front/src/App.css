@@ -20,11 +20,26 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+
 }
-.contents {
+
+#main_nav {
+  display: block;
+  margin: 10px;
+  float: left;
+  text-align: left;
+  flex: 0.5;
+  border: 1px solid black;
+}
+
+#main_content {
+  margin: 10px;
   display: block;
   float: left;
   text-align: left;
+  flex: 2;
+  border: 1px solid black;
+
 }
 .contents .list div {
   margin-bottom: 40px;
@@ -32,13 +47,7 @@
   flex-shrink: 3;
   border: 1px solid black;
 }
-.contents nav {
-  display: block;
-  float: left;
-  width: 5%;
-  margin-bottom: 40px;
-  text-align: center;
-}
+
 .footer {
   background-color: #d3e1ee;
   font-weight: 500;
@@ -52,12 +61,26 @@
   width: 100%;
 }
 
+.contentsAttend{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+}
+
+.attendTable{
+  margin: 20px;
+  border: 1px solid green;
+}
+
+
+
 ul {
   list-style: none;
   padding-left: 0;
 }
 li {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+  font-weight: bold;
 }
 
 a {

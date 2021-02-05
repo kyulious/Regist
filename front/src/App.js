@@ -5,6 +5,8 @@ import Content from "./components/content"
 import Footer from "./components/footer"
 import Nav from "./components/nav"
 import Regist from "./components/regist"
+import NavAttend from "./components/nav_attendance"
+import ContentAttend from "./components/content_attendance"
 
 class App extends Component {
   constructor(props) {
@@ -23,7 +25,12 @@ class App extends Component {
     } else if (this.state.mode === "main") {
       _content = <Content></Content>
       _nav = <Nav></Nav>
+    } else if (this.state.mode === "navAttend"){
+      _content = <ContentAttend />
+      _nav = <NavAttend></NavAttend>
     }
+
+
     return (
       <div className="App">
         <Header
@@ -33,10 +40,17 @@ class App extends Component {
             })
           }.bind(this)}
         ></Header>
+
         <div className="main">
-          {_registPage}
-          {_content}
-          {_nav}
+
+          <div id="main_nav">
+            {_nav}
+          </div>
+          <div id="main_content">
+            {_registPage}
+            {_content}
+          </div>
+
         </div>
         <Footer></Footer>
       </div>
