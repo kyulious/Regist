@@ -31,6 +31,17 @@ class Header extends Component {
             regist
           </a>
         </div>
+        <div>
+          <a
+            href="/" // App.js의 main만 변형할 예정이라 href 불필요.
+            onClick={(e) => {
+              e.preventDefault();
+              this.props.changePage("navAttend")
+            }}
+          >
+            attendance
+          </a>
+        </div>
       </div>
     )
   }

@@ -4,6 +4,7 @@ class Nav extends Component {
   //render 필수
   render() {
     console.log("nav render")
+
     return (
       <div className="nav">
         <h2>Menu</h2>
