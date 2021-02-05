@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
 #main_nav {
@@ -36,43 +35,47 @@
   margin: 10px;
   display: block;
   float: left;
+  width: 80%;
   text-align: left;
   flex: 2;
   border: 1px solid black;
-
+}
+.contents_head {
+  padding-left: 60px;
+}
+.list {
+  float: left;
+  padding-left: 100px;
+  width: 70%;
 }
 .contents .list div {
   margin-bottom: 40px;
-  width: 700px;
-  flex-shrink: 3;
+  width: 80%;
   border: 1px solid black;
 }
-
 .footer {
   background-color: #d3e1ee;
   font-weight: 500;
   clear: both;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   height: 70px;
   bottom: 0;
-  justify-content: space-around;
   position: absolute;
   width: 100%;
 }
 
-.contentsAttend{
+.contentsAttend {
   border: 1px solid red;
   display: flex;
   flex-direction: row;
 }
 
-.attendTable{
+.attendTable {
   margin: 20px;
   border: 1px solid green;
 }
-
-
 
 ul {
   list-style: none;
