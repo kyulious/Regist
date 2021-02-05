@@ -22,7 +22,7 @@ class Header extends Component {
         </div>
         <div>
           <a
-            href="/"
+            href="/regist"
             onClick={function (e) {
               e.preventDefault()
               this.props.changePage("regist")
@@ -33,10 +33,10 @@ class Header extends Component {
         </div>
         <div>
           <a
-            href="/" // App.js의 main만 변형할 예정이라 href 불필요.
+            href="/attendance" // App.js의 main만 변형할 예정이라 href 불필요.
             onClick={(e) => {
               e.preventDefault();
-              this.props.changePage("navAttend")
+              this.props.changePage("attendance")
             }}
           >
             attendance
