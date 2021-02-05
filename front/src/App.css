@@ -22,7 +22,7 @@
   justify-content: space-around;
 }
 
-#main_nav {
+.main_nav {
   display: block;
   margin: 10px;
   float: left;

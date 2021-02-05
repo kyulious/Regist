@@ -25,11 +25,10 @@ class App extends Component {
     } else if (this.state.mode === "main") {
       _content = <Content></Content>
       _nav = <Nav></Nav>
-    } else if (this.state.mode === "navAttend"){
+    } else if (this.state.mode === "navAttend") {
       _content = <ContentAttend />
       _nav = <NavAttend></NavAttend>
     }
-
 
     return (
       <div className="App">
@@ -42,15 +41,11 @@ class App extends Component {
         ></Header>
 
         <div className="main">
-
-          <div id="main_nav">
-            {_nav}
-          </div>
+          {_nav}
           <div id="main_content">
             {_registPage}
             {_content}
           </div>
-
         </div>
         <Footer></Footer>
       </div>
