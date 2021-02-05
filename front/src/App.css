@@ -22,12 +22,13 @@
   justify-content: space-around;
 }
 
-.main_nav {
+#main_nav {
   display: block;
   margin: 10px;
   float: left;
   text-align: left;
   flex: 0.5;
+  width: 15%;
   border: 1px solid black;
 }
 
@@ -70,6 +71,12 @@
   border: 1px solid red;
   display: flex;
   flex-direction: row;
+  float: left;
+  width: 100%;
+}
+.navAttend {
+  float: left;
+  width: 15%;
 }
 
 .attendTable {
