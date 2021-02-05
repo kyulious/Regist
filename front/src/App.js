@@ -40,12 +40,10 @@ class App extends Component {
           }.bind(this)}
         ></Header>
 
-        <div className="main">
-          {_nav}
-          <div id="main_content">
-            {_registPage}
-            {_content}
-          </div>
+        {_nav}
+        <div id="main_content">
+          {_registPage}
+          {_content}
         </div>
         <Footer></Footer>
       </div>
