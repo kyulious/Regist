@@ -6,7 +6,7 @@ class Nav extends Component {
     console.log("nav render")
 
     return (
-      <div className="nav">
+      <div id="main_nav">
         <h2>Menu</h2>
         <div>1</div>
         <div>2</div>
