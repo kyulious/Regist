@@ -26,8 +26,7 @@ class App extends Component {
       _content = <Content></Content>
       _nav = <Nav></Nav>
 
-    } else if (this.state.mode === "navAttend") {
->>>>>>> e771abfa3ae869368f900513fa38b2687f28a93c
+    } else if (this.state.mode === "attendance") {
       _content = <ContentAttend />
       _nav = <NavAttend></NavAttend>
     }
