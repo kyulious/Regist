@@ -6,7 +6,7 @@ class Footer extends Component {
     console.log("Footer render")
     return (
       <div class="footer">
-        <p>By Blooming</p>
+        <p>By Blooming!</p>
       </div>
     )
   }
