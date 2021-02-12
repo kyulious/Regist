@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import profile from "../assets/image/Dog_23.png"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 class Header extends Component {
   //render 필수
   render() {
@@ -8,26 +8,26 @@ class Header extends Component {
     return (
       <div class="main-nav">
         <p class="main-logo">
-          <Link to="/">J2KB</Link>
+          <NavLink to="/">J2KB</NavLink>
         </p>
         <span className="flexgrowBlank"></span>
         <span class="main-nav menu">
-          <Link to="/about">J2KB?</Link>
+          <NavLink to="/about">J2KB?</NavLink>
         </span>
         <span class="main-nav menu">
-          <Link to="/board">Board</Link>
+          <NavLink to="/board">Board</NavLink>
         </span>
         <span class="main-nav menu">
-          <Link to="/til">TIL</Link>
+          <NavLink to="/til">TIL</NavLink>
         </span>
         <span class="main-nav menu">
-          <Link to="/login">Login</Link>
+          <NavLink to="/login">Login</NavLink>
         </span>
         <span class="main-nav menu">
-          <Link to="/regist">regist</Link>
+          <NavLink to="/regist">regist</NavLink>
         </span>
         <span class="main-nav menu">
-          <Link to="/attendance">Attendance</Link>
+          <NavLink to="/attendance">Attendance</NavLink>
         </span>
         <span class="main-nav menu">환영합니다!</span>
         <img src={profile} alt="logged" class="profile" />
