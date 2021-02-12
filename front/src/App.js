@@ -3,10 +3,10 @@ import React, { Component } from "react"
 import Header from "./components/header"
 import Content from "./components/content"
 import Footer from "./components/footer"
-import Nav from "./components/nav"
+// import Nav from "./components/nav"
 import Regist from "./components/regist"
 import NavAttend from "./components/nav_attendance"
-import ContentAttend from "./components/content_attendance"
+// import ContentAttend from "./components/content_attendance"
 
 class App extends Component {
   constructor(props) {
@@ -24,11 +24,8 @@ class App extends Component {
       _registPage = <Regist></Regist>
     } else if (this.state.mode === "main") {
       _content = <Content></Content>
-      _nav = <Nav></Nav>
-
+      // _nav = <Nav></Nav>
     } else if (this.state.mode === "attendance") {
-      _content = <ContentAttend />
-      _nav = <NavAttend></NavAttend>
     }
 
     return (
