@@ -36,19 +36,12 @@ class Header extends Component {
         </span>
         <span class="main-nav menu">
           <a
-<<<<<<< HEAD
             href="/"
             onClick={function (e) {
               e.preventDefault()
               this.props.changePage("attendance")
             }.bind(this)}
-=======
-            href="/" // App.js의 main만 변형할 예정이라 href 불필요.
-            onClick={(e) => {
-              e.preventDefault();
-              this.props.changePage("attendance")
-            }}
->>>>>>> 8df0a6085ea3e1f40a53291f09058750b0fbc35a
+
           >
             Attendance
           </a>

@@ -6,7 +6,7 @@ import Footer from "./components/footer"
 // import Nav from "./components/nav"
 import Regist from "./components/regist"
 import NavAttend from "./components/nav_attendance"
-import ContentAttend from "./components/content_attendance"
+// import ContentAttend from "./components/content_attendance"
 
 class App extends Component {
   constructor(props) {
@@ -24,14 +24,12 @@ class App extends Component {
       _registPage = <Regist></Regist>
     } else if (this.state.mode === "main") {
       _content = <Content></Content>
-<<<<<<< HEAD
       // _nav = <Nav></Nav>
-=======
-      _nav = <Nav></Nav>
->>>>>>> 8df0a6085ea3e1f40a53291f09058750b0fbc35a
     } else if (this.state.mode === "attendance") {
+/*
       _content = <ContentAttend />
       _nav = <NavAttend></NavAttend>
+*/
     }
 
     return (

@@ -5,12 +5,7 @@ class ContentAttend extends Component {
   render() {
     console.log("Content attendance render")
     return (
-      <div className="contentsAttend">
-        <div className="attendTable">
-          hello
-        </div>
-      </div>
-
+      
     )
   }
 }
