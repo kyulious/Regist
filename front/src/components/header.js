@@ -8,53 +8,29 @@ class Header extends Component {
     return (
       <div class="main-nav">
         <p class="main-logo">
-          <a
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("main")
-            }.bind(this)}
-          >
-            J2KB
-          </a>
+          <a href="/">J2KB</a>
         </p>
         <span className="flexgrowBlank"></span>
-        <span class="main-nav menu">J2KB?</span>
-        <span class="main-nav menu">Board</span>
-        <span class="main-nav menu">TIL</span>
-        <span class="main-nav menu">Login</span>
         <span class="main-nav menu">
-          <a
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("regist")
-            }.bind(this)}
-          >
-            regist
-          </a>
+          <a href="/about">J2KB?</a>
         </span>
         <span class="main-nav menu">
-          <a
-<<<<<<< HEAD
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("attendance")
-            }.bind(this)}
-=======
-            href="/" // App.js의 main만 변형할 예정이라 href 불필요.
-            onClick={(e) => {
-              e.preventDefault();
-              this.props.changePage("attendance")
-            }}
->>>>>>> 8df0a6085ea3e1f40a53291f09058750b0fbc35a
-          >
-            Attendance
-          </a>
+          <a href="/board">Board</a>
         </span>
-        {/* <span class="main-nav menu logged">환영합니다! </span> */}
-        <img src={profile} alt="환영합니다!" class="profile" />
+        <span class="main-nav menu">
+          <a href="/til">TIL</a>
+        </span>
+        <span class="main-nav menu">
+          <a href="/login">Login</a>
+        </span>
+        <span class="main-nav menu">
+          <a href="/regist">regist</a>
+        </span>
+        <span class="main-nav menu">
+          <a href="/attendance">Attendance</a>
+        </span>
+        <span class="main-nav menu">환영합니다!</span>
+        <img src={profile} alt="logged" class="profile" />
       </div>
       // <div className="header">
       //   <h1>
