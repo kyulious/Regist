@@ -4,7 +4,11 @@ class Footer extends Component {
   //render 필수
   render() {
     console.log("Footer render")
-    return <div className="footer">By blooming</div>
+    return (
+      <div class="footer">
+        <p>By Blooming</p>
+      </div>
+    )
   }
 }
 
