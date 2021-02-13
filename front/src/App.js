@@ -1,4 +1,4 @@
-import "./App.css"
+import "../src/assets/css/App.css"
 import React, { Component } from "react"
 import Header from "./components/header"
 import Content from "./components/content"
@@ -6,6 +6,8 @@ import Footer from "./components/footer"
 // import Nav from "./components/nav"
 import Regist from "./components/regist"
 import Til from "./components/til"
+import Board from "./components/board"
+import BoardInput from "./components/boardInput"
 import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch } from "react-router-dom"
@@ -50,7 +52,7 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/board">
-            <Til></Til>
+            <Board></Board>
           </Route>
           <Route path="/til">
             <Til></Til>
@@ -63,6 +65,9 @@ class App extends Component {
           </Route>
           <Route path="/attendance">
             <Til></Til>
+          </Route>
+          <Route path="/boardInput">
+            <BoardInput></BoardInput>
           </Route>
           <Route path="/">404 error</Route>
         </Switch>

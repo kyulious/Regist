@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   font-family: "Do Hyeon", sans-serif;
-  background-image: url(../src/assets/image/darkmode_bg.svg);
+  background-image: url(../image/darkmode_bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -68,6 +68,7 @@ p {
 .main-til,
 .main-summary {
   width: 22%;
+  position: relative;
   transition: 0.4s ease-out;
 }
 .board-content,
@@ -107,7 +108,16 @@ p {
   font-size: 2rem;
   margin: 0;
 }
-
+.addContent {
+  position: absolute;
+  right: 0;
+}
+.addContent:visited {
+  color: white;
+}
+.addContent:link {
+  color: white;
+}
 /* footer부분 */
 .footer {
   font-size: 1.5rem;
@@ -136,7 +146,7 @@ p {
 /* LightMode일 경우 */
 @media (prefers-color-scheme: light) {
   body {
-    background-image: url(../src/assets/image/lightmode_bg.svg);
+    background-image: url(../image/lightmode_bg.svg);
   }
   .board-content,
   .til-content,
