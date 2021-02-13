@@ -135,3 +135,36 @@ p {
     background-image: url(../src/assets/image/lightmode_bg.svg);
   }
 }
+
+/* AttendContent */
+
+.wrapperAttend {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items:stretch;
+  margin-top: 20px;
+  margin-bottom: 70px;
+}
+
+.NavAttend {
+  order: 0;
+  flex: 1;
+  margin: 20px;
+  border-radius: 20px;
+  background-color: rgba(234, 235, 250, 0.5);
+  box-shadow: 8px 8px 22px #545454;
+  font-size: 20px;
+  line-height: 80px;
+
+}
+
+.MainAttend {
+  order:1;
+  flex: 5;
+  margin: 20px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: rgba(234, 235, 250, 0.5);
+  box-shadow: 8px 8px 22px #545454;
+}
