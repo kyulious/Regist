@@ -1,7 +1,12 @@
 import React, { Component } from "react"
 import "../assets/css/boardInput.css"
-class boardInput extends Component {
-  //render 필수
+import Content from "./content"
+import { Route, Switch, withRouter } from "react-router-dom"
+
+class BoardInput extends Component {
+  // goBack = () => {
+  //   this.props.history.goBack()
+  // }
   render() {
     console.log("Board render")
     return (
@@ -12,10 +17,19 @@ class boardInput extends Component {
 
         <div className="addArticle_container">
           <div className="addArticle_form">
-            <form action="#">
+            <form
+              action="/"
+              method="post"
+              onSubmit={function (e) {
+                e.preventDefault()
+                console.log(e.target.title.value)
+                this.props.onSubmit(e.target.title.value)
+                alert("goood")
+              }.bind(this)}
+            >
               <div className="addArticle_title">
                 <h2>제목</h2>
-                <input type="text" name="#"></input>
+                <input type="text" name="title"></input>
               </div>
               <div className="addArticle_category">
                 <h2>분류</h2>
@@ -26,10 +40,10 @@ class boardInput extends Component {
               </div>
               <div className="addArticle_contents">
                 <h2>내용</h2>
-                <textarea name="contents" id="" cols="30" rows="10"></textarea>
+                <textarea name="desc" id="" cols="30" rows="10"></textarea>
               </div>
               <div className="addArticle_submit">
-                <button value="Upload">Upload</button>
+                <input type="submit"></input>
               </div>
             </form>
           </div>
@@ -39,4 +53,4 @@ class boardInput extends Component {
   }
 }
 
-export default boardInput
+export default withRouter(BoardInput)
