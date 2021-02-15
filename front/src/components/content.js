@@ -20,13 +20,13 @@ class Content extends Component {
           </div>
           <div class="board-content">
             <div class="content">
-              <p class="subtitle">1</p>
+              <p class="subtitle">{this.props.title}</p>
             </div>
             <div class="content">
-              <p class="subtitle">2</p>
+              <p class="subtitle"></p>
             </div>
             <div class="content">
-              <p class="subtitle">3</p>
+              <p class="subtitle"></p>
             </div>
             <div class="content">
               <p class="subtitle">4. 일정 갯수 넘어가면 스크롤</p>
