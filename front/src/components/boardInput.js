@@ -4,10 +4,10 @@ import Content from "./content"
 import { Route, Switch, withRouter } from "react-router-dom"
 
 class BoardInput extends Component {
-  // goBack = () => {
-  //   this.props.history.goBack()
-  // }
-  render() {
+  go = () => {
+    this.props.history.goBack()
+  }
+  render(history) {
     console.log("Board render")
     return (
       <div class="addArticle-wrapper">
@@ -20,7 +20,7 @@ class BoardInput extends Component {
             <form
               action="/"
               method="post"
-              onSubmit={function (e) {
+              onSubmit={function (e, history) {
                 e.preventDefault()
                 console.log(e.target.title.value)
                 this.props.onSubmit(e.target.title.value)
@@ -43,7 +43,7 @@ class BoardInput extends Component {
                 <textarea name="desc" id="" cols="30" rows="10"></textarea>
               </div>
               <div className="addArticle_submit">
-                <input type="submit"></input>
+                <button onClick={this.go}>submit</button>
               </div>
             </form>
           </div>
