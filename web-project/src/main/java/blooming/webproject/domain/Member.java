@@ -1,5 +1,6 @@
 package blooming.webproject.domain;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,4 +32,15 @@ public class Member {
     private List<Board> Boards = new ArrayList<>();
 
 
+    @Builder
+    public Member(Long id, String name, String password, String email, Long point, boolean admin, Long level, List<Board> boards) {
+        this.id = id;
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.point = point;
+        this.admin = admin;
+        this.level = level;
+        Boards = boards;
+    }
 }
