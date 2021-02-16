@@ -1,5 +1,8 @@
 import React, { Component } from "react"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPlusSquare } from "@fortawesome/free-solid-svg-icons"
+import "../assets/css/App.css"
+import { NavLink } from "react-router-dom"
 class Content extends Component {
   //render 필수
   render() {
@@ -8,17 +11,22 @@ class Content extends Component {
       <div class="wrapper">
         <div class="main-board">
           <div class="board-title">
-            <h1>최신글</h1>
+            <h1>
+              최신글
+              <NavLink to="/boardInput" className="addContent">
+                <FontAwesomeIcon icon={faPlusSquare} />
+              </NavLink>
+            </h1>
           </div>
           <div class="board-content">
             <div class="content">
-              <p class="subtitle">1</p>
+              <p class="subtitle">{this.props.title}</p>
             </div>
             <div class="content">
-              <p class="subtitle">2</p>
+              <p class="subtitle"></p>
             </div>
             <div class="content">
-              <p class="subtitle">3</p>
+              <p class="subtitle"></p>
             </div>
             <div class="content">
               <p class="subtitle">4. 일정 갯수 넘어가면 스크롤</p>
@@ -28,7 +36,12 @@ class Content extends Component {
 
         <div class="main-til">
           <div class="til-title">
-            <h1>최신TIL</h1>
+            <h1>
+              최신TIL
+              <a href="/" className="addContent">
+                <FontAwesomeIcon icon={faPlusSquare} />
+              </a>
+            </h1>
           </div>
           <div class="til-content">
             <div class="content">
@@ -45,7 +58,12 @@ class Content extends Component {
 
         <div class="main-summary">
           <div class="summary-title">
-            <h1>Summary</h1>
+            <h1>
+              Summary
+              <a href="/" className="addContent">
+                <FontAwesomeIcon icon={faPlusSquare} />
+              </a>
+            </h1>
           </div>
           <div class="summary-content">
             <div class="content">

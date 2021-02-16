@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   box-sizing: border-box;
   font-family: "Do Hyeon", sans-serif;
-  background-image: url(../src/assets/image/darkmode_bg.svg);
+  background-image: url(../image/darkmode_bg.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,11 +30,18 @@ p {
   padding: 10px;
   font-size: 2rem;
   font-weight: 700;
+  transition: 0.4s ease-out;
 }
 .flexgrowBlank {
   flex-grow: 0.9;
 }
 
+.main-nav a:hover {
+  background-color: rgba(110, 175, 136, 0.9);
+  padding: 7px;
+  transition: 0.4s ease-out;
+  border-radius: 100px;
+}
 .main-nav a:link {
   color: white;
   text-decoration: none;
@@ -44,7 +51,10 @@ p {
   color: white;
   text-decoration: none;
 }
-
+.main-nav .active {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
 /* 메인 컨텐츠 부분 */
 .wrapper {
   display: flex;
@@ -58,6 +68,7 @@ p {
 .main-til,
 .main-summary {
   width: 22%;
+  position: relative;
   transition: 0.4s ease-out;
 }
 .board-content,
@@ -97,7 +108,16 @@ p {
   font-size: 2rem;
   margin: 0;
 }
-
+.addContent {
+  position: absolute;
+  right: 0;
+}
+.addContent:visited {
+  color: white;
+}
+.addContent:link {
+  color: white;
+}
 /* footer부분 */
 .footer {
   font-size: 1.5rem;
@@ -125,13 +145,16 @@ p {
 
 /* LightMode일 경우 */
 @media (prefers-color-scheme: light) {
+  body {
+    background-image: url(../image/lightmode_bg.svg);
+  }
   .board-content,
   .til-content,
   .summary-content {
     background-color: rgba(234, 235, 250, 0.5);
   }
 
-  body {
-    background-image: url(../src/assets/image/lightmode_bg.svg);
+  .main-nav a:hover {
+    background-color: rgba(114, 219, 223, 0.9);
   }
 }

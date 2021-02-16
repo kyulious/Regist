@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import profile from "../assets/image/Dog_23.png"
-
+import { NavLink } from "react-router-dom"
 class Header extends Component {
   //render 필수
   render() {
@@ -8,46 +8,29 @@ class Header extends Component {
     return (
       <div class="main-nav">
         <p class="main-logo">
-          <a
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("main")
-            }.bind(this)}
-          >
-            J2KB
-          </a>
+          <NavLink to="/">J2KB</NavLink>
         </p>
         <span className="flexgrowBlank"></span>
-        <span class="main-nav menu">J2KB?</span>
-        <span class="main-nav menu">Board</span>
-        <span class="main-nav menu">TIL</span>
-        <span class="main-nav menu">Login</span>
         <span class="main-nav menu">
-          <a
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("regist")
-            }.bind(this)}
-          >
-            regist
-          </a>
+          <NavLink to="/about">J2KB?</NavLink>
         </span>
         <span class="main-nav menu">
-          <a
-            href="/"
-            onClick={function (e) {
-              e.preventDefault()
-              this.props.changePage("attendance")
-            }.bind(this)}
-
-          >
-            Attendance
-          </a>
+          <NavLink to="/board">Board</NavLink>
         </span>
-        {/* <span class="main-nav menu logged">환영합니다! </span> */}
-        <img src={profile} alt="환영합니다!" class="profile" />
+        <span class="main-nav menu">
+          <NavLink to="/til">TIL</NavLink>
+        </span>
+        <span class="main-nav menu">
+          <NavLink to="/login">Login</NavLink>
+        </span>
+        <span class="main-nav menu">
+          <NavLink to="/regist">regist</NavLink>
+        </span>
+        <span class="main-nav menu">
+          <NavLink to="/attendance">Attendance</NavLink>
+        </span>
+        <span class="main-nav menu">환영합니다!</span>
+        <img src={profile} alt="logged" class="profile" />
       </div>
       // <div className="header">
       //   <h1>
