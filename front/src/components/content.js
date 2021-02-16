@@ -4,9 +4,35 @@ import { faPlusSquare } from "@fortawesome/free-solid-svg-icons"
 import "../assets/css/App.css"
 import { NavLink } from "react-router-dom"
 class Content extends Component {
-  //render 필수
+  shouldComponentUpdate(newProps, newState) {
+    console.log(
+      "===> TOC render shouldComponentUpdate",
+      newProps.data,
+      this.props.data
+    )
+
+    if (this.props.data === newProps.data) {
+      return false
+    }
+
+    return true
+  }
+
   render() {
     console.log("Content render")
+    console.log(this.props.data)
+
+    var titleLists = []
+    var i = 0
+    while (i < this.props.data.length) {
+      titleLists.push(
+        <div class="content" key={this.props.data[i].id}>
+          <p class="subtitle">{this.props.data[i].title}</p>
+        </div>
+      )
+      i++
+    }
+
     return (
       <div class="wrapper">
         <div class="main-board">
@@ -19,18 +45,16 @@ class Content extends Component {
             </h1>
           </div>
           <div class="board-content">
+            {/* <div class="content">
+              <p class="subtitle">{this.props.title}</p>
+            </div>
             <div class="content">
               <p class="subtitle">{this.props.title}</p>
             </div>
             <div class="content">
-              <p class="subtitle"></p>
-            </div>
-            <div class="content">
-              <p class="subtitle"></p>
-            </div>
-            <div class="content">
-              <p class="subtitle">4. 일정 갯수 넘어가면 스크롤</p>
-            </div>
+              <p class="subtitle">{this.props.title}</p>
+            </div> */}
+            {titleLists}
           </div>
         </div>
 
