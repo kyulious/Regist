@@ -23,14 +23,14 @@ class Content extends Component {
     console.log(this.props.data)
 
     var titleLists = []
-    var i = 0
-    while (i < this.props.data.length) {
+    var i = this.props.data.length - 1
+    while (i >= 0) {
       titleLists.push(
         <div class="content" key={this.props.data[i].id}>
           <p class="subtitle">{this.props.data[i].title}</p>
         </div>
       )
-      i++
+      i--
     }
 
     return (
