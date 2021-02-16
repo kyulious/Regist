@@ -12,6 +12,7 @@ import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
 
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -27,6 +28,7 @@ class App extends Component {
   }
 
   render() {
+
     var _title,
       _desc,
       _article = null
@@ -38,6 +40,7 @@ class App extends Component {
         break
       }
       i += 1
+
     }
     console.log(_title)
     _article = <Content title={_title}></Content>

@@ -12,6 +12,7 @@ class Header extends Component {
         </p>
         <span className="flexgrowBlank"></span>
         <span class="main-nav menu">
+
           <NavLink to="/about">J2KB?</NavLink>
         </span>
         <span class="main-nav menu">
