@@ -8,9 +8,11 @@ import Regist from "./components/regist"
 import Til from "./components/til"
 import Board from "./components/board"
 import BoardInput from "./components/boardInput"
-import NavAttend from "./components/nav_attendance"
+
+// import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
+
 
 class App extends Component {
   constructor(props) {
@@ -38,7 +40,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
         <Header></Header>
+
         <Switch>
           <Route exact path="/">
             <Content data={this.getReadContents()}></Content>
@@ -73,10 +77,11 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/regist">
-            <Til></Til>
+
+            <Regist></Regist>
           </Route>
           <Route path="/attendance">
-            <Til></Til>
+            <ContentAttend></ContentAttend>
           </Route>
           <Route path="/boardInput"></Route>
           <Route path="/">404 error</Route>
