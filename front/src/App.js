@@ -80,7 +80,7 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/regist">
-            <Til></Til>
+            <Regist></Regist>
           </Route>
           <Route path="/attendance">
             <Til></Til>
