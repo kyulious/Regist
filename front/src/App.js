@@ -8,7 +8,7 @@ import Regist from "./components/regist"
 import Til from "./components/til"
 import Board from "./components/board"
 import BoardInput from "./components/boardInput"
-import NavAttend from "./components/nav_attendance"
+// import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
 
@@ -86,7 +86,7 @@ class App extends Component {
             <Regist></Regist>
           </Route>
           <Route path="/attendance">
-            <Til></Til>
+            <ContentAttend></ContentAttend>
           </Route>
           <Route path="/boardInput"></Route>
           <Route path="/">404 error</Route>
