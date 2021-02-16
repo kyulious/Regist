@@ -20,9 +20,8 @@ class BoardInput extends Component {
             <form
               action="/"
               method="post"
-              onSubmit={function (e, history) {
+              onSubmit={function (e) {
                 e.preventDefault()
-                console.log(e.target.title.value)
                 this.props.onSubmit(e.target.title.value)
                 alert("goood")
               }.bind(this)}

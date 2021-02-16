@@ -23,36 +23,29 @@ class App extends Component {
       contents: [
         { id: 1, title: "커피맛집", desc: "삼청동인가?" },
         { id: 2, title: "프로젝트 하실분 !", desc: "삼청동인가?" },
-        { id: 3, title: "프로젝트 하실분 !", desc: "삼청동인가?" },
+        { id: 3, title: "뭐하지!", desc: "음...?" },
       ],
     }
   }
 
-  render() {
-
-    var _title,
-      _desc,
-      _article = null
+  getReadContents() {
     var i = 0
-    while (i < this.state.contents.length) {
-      var data = this.state.contents[i]
-      if (data.id === this.state.selected_content_id) {
-        _title = data.title
-        break
-      }
-      i += 1
-
+    var data = []
+    for (i = 0; i < this.state.contents.length; i++) {
+      data.push(this.state.contents[i])
     }
-    console.log(_title)
-    _article = <Content title={_title}></Content>
+    return data
+  }
+
+  render() {
     return (
       <div className="App">
-      
+
         <Header></Header>
 
         <Switch>
           <Route exact path="/">
-            {_article}
+            <Content data={this.getReadContents()}></Content>
           </Route>
           <Route path="/about">
             <Til></Til>
@@ -73,9 +66,7 @@ class App extends Component {
                 })
                 this.setState({
                   contents: _contents,
-                  selected_content_id: this.max_content_id,
                 })
-                console.log(_title, _desc)
               }.bind(this)}
             ></BoardInput>
           </Route>
