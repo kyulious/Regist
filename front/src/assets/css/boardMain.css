@@ -81,6 +81,7 @@ p {
   width: 92%;
   height: 50em;
   padding: 50px;
+  overflow: auto;
 }
 .contents {
   width: 50%;
@@ -95,7 +96,10 @@ p {
 
   cursor: pointer;
 }
-
+.contents_title,
+.contents_desc {
+  color: black;
+}
 /* footer부분 */
 .footer {
   font-size: 1.5rem;

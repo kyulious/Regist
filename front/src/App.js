@@ -13,7 +13,6 @@ import BoardInput from "./components/boardInput"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
 
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -40,7 +39,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Header></Header>
 
         <Switch>
@@ -51,7 +49,7 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/board">
-            <Board></Board>
+            <Board data={this.getReadContents()}></Board>
           </Route>
           <Route path="/boardInput">
             <BoardInput
@@ -77,7 +75,6 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/regist">
-
             <Regist></Regist>
           </Route>
           <Route path="/attendance">
