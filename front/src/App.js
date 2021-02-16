@@ -8,9 +8,11 @@ import Regist from "./components/regist"
 import Til from "./components/til"
 import Board from "./components/board"
 import BoardInput from "./components/boardInput"
-import NavAttend from "./components/nav_attendance"
+
+// import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
+
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +29,7 @@ class App extends Component {
   }
 
   render() {
+
     var _title,
       _desc,
       _article = null
@@ -38,14 +41,15 @@ class App extends Component {
         break
       }
       i += 1
+
     }
     console.log(_title)
     _article = <Content title={_title}></Content>
     return (
       <div className="App">
-        
+      // 규리님 확인 필요.
         <Header></Header>
-        <Regist></Regist>
+
         <Switch>
           <Route exact path="/">
             {_article}
@@ -82,10 +86,11 @@ class App extends Component {
             <Til></Til>
           </Route>
           <Route path="/regist">
-            <Til></Til>
+
+            <Regist></Regist>
           </Route>
           <Route path="/attendance">
-            <Til></Til>
+            <ContentAttend></ContentAttend>
           </Route>
           <Route path="/boardInput"></Route>
           <Route path="/">404 error</Route>

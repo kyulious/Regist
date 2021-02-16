@@ -1,3 +1,4 @@
+
 import React, { Component, useRef } from "react";
 import { useForm } from 'react-hook-form';
 
@@ -18,19 +19,19 @@ const onSubmit = (data) => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <div id="labelform">이메일</div>
-      <input 
-        class="maininput" 
-        name="email" 
-        type="email" 
+      <input
+        class="maininput"
+        name="email"
+        type="email"
         placeholder="이메일을 입력해주세요."
-      ref={register({ 
+      ref={register({
         //필수입력
-        reqired: true, 
+        reqired: true,
         pattern: /^\S+@\S+$/i })}/>
         {errors.email &&<p class="alert">이메일을 제대로 입력해주세요.</p>}
         <div id="labelform">아이디</div>
       <input
-        class="maininput" 
+        class="maininput"
         name="id"
         placeholder="아이디를 입력해주세요.(최대 8글자)"
         ref={register({ required: true, maxLength: 10, pattern: "[a-zA-Z].+" })}
@@ -40,7 +41,7 @@ const onSubmit = (data) => {
       {errors.id && errors.id.type === "pattern" && <p class="alert">아이디는 이내로 입력해주세요.</p>}
         <div id="labelform">이름</div>
       <input
-        class="maininput" 
+        class="maininput"
         name="name"
         placeholder="이름을 입력해주세요.(최대 10글자)"
         ref={register({ required: true, maxLength: 10 })}
@@ -64,10 +65,10 @@ const onSubmit = (data) => {
         name="password_confirm"
         type="password"
         placeholder="비밀번호를 입력해주세요.(6~15글자)"
-        ref={register({ 
-          required: true, 
+        ref={register({
+          required: true,
           //유효성 검사(위에서 password.current 지정해줘야함)
-          validate: (value) => 
+          validate: (value) =>
             value === password.current
         })}
       />
