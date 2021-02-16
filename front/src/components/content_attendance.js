@@ -36,7 +36,7 @@ class ContentAttend extends Component {
     console.log(weekList);
 
     function convertAttend(attend) {
-      if(attend == 0){
+      if(attend === 0){
         return "결석 😢";
       }
       else {

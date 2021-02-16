@@ -47,7 +47,7 @@ class App extends Component {
     _article = <Content title={_title}></Content>
     return (
       <div className="App">
-      // 규리님 확인 필요.
+      
         <Header></Header>
 
         <Switch>
