@@ -41,6 +41,7 @@ p {
   padding: 7px;
   transition: 0.4s ease-out;
   border-radius: 100px;
+  cursor: pointer;
 }
 .main-nav a:link {
   color: white;

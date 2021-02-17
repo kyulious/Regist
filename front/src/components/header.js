@@ -40,7 +40,7 @@ class Header extends Component {
         <span class="main-nav menu">
           {/* <NavLink to="/login">Login</NavLink> */}
           <React.Fragment>
-            <a onClick={this.handleShow.bind(this)}> 로그인</a>
+            <a onClick={this.handleShow.bind(this)}>로그인</a>
             <Modal
               open={this.state.setShow}
               close={this.handleClose.bind(this)}
