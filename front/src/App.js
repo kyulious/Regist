@@ -12,7 +12,6 @@ import BoardInput from "./components/boardInput"
 // import NavAttend from "./components/nav_attendance"
 import ContentAttend from "./components/content_attendance"
 import { Route, Switch, withRouter } from "react-router-dom"
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -83,7 +82,6 @@ class App extends Component {
           <Route path="/boardInput"></Route>
           <Route path="/">404 error</Route>
         </Switch>
-
         {/* {_nav} */}
         {/* <div id="main_content">
           {_registPage}

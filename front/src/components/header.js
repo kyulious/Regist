@@ -1,8 +1,25 @@
-import React, { Component } from "react"
+import React, { Component, useState } from "react"
 import profile from "../assets/image/Dog_23.png"
 import { NavLink } from "react-router-dom"
+import Modal from "./modal"
+
 class Header extends Component {
-  //render 필수
+  constructor(props) {
+    super(props)
+    this.state = { show: false, setShow: false }
+  }
+
+  handleShow() {
+    this.setState({
+      setShow: true,
+    })
+  }
+  handleClose() {
+    this.setState({
+      setShow: false,
+    })
+  }
+
   render() {
     console.log("Header render")
     return (
@@ -12,7 +29,6 @@ class Header extends Component {
         </p>
         <span className="flexgrowBlank"></span>
         <span class="main-nav menu">
-
           <NavLink to="/about">J2KB?</NavLink>
         </span>
         <span class="main-nav menu">
@@ -22,7 +38,31 @@ class Header extends Component {
           <NavLink to="/til">TIL</NavLink>
         </span>
         <span class="main-nav menu">
-          <NavLink to="/login">Login</NavLink>
+          {/* <NavLink to="/login">Login</NavLink> */}
+          <React.Fragment>
+            <a onClick={this.handleShow.bind(this)}> 로그인</a>
+            <Modal
+              open={this.state.setShow}
+              close={this.handleClose.bind(this)}
+              title="login"
+            >
+              <div className="signIn_wrapper">
+                <div className="signIn_box">
+                  <div className="signIn_id">
+                    <form action="">
+                      <div className="signIn_email">
+                        E-mail : <input type="text"></input>
+                      </div>
+                      <div className="signIn_pw">
+                        PW: <input type="password"></input>
+                      </div>
+                      <button value="login">로그인</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </Modal>
+          </React.Fragment>
         </span>
         <span class="main-nav menu">
           <NavLink to="/regist">regist</NavLink>
@@ -33,44 +73,6 @@ class Header extends Component {
         <span class="main-nav menu">환영합니다!</span>
         <img src={profile} alt="logged" class="profile" />
       </div>
-      // <div className="header">
-      //   <h1>
-      // <a
-      //   href="/"
-      //   // onClick={function (e) {
-      //   //   e.preventDefault()
-      //   // }}
-      // >
-      //   J2KB
-      //     </a>
-      //   </h1>
-      //   <div className="space"></div>
-      //   <div>
-      //     <a href="/login">login</a>
-      //   </div>
-      //   <div>
-      // <a
-      //   href="/"
-      //   onClick={function (e) {
-      //     e.preventDefault()
-      //     this.props.changePage("regist")
-      //   }.bind(this)}
-      // >
-      //   regist
-      //     </a>
-      //   </div>
-      //   <div>
-      //     <a
-      //       href="/" // App.js의 main만 변형할 예정이라 href 불필요.
-      //       onClick={(e) => {
-      //         e.preventDefault();
-      //         this.props.changePage("navAttend")
-      //       }}
-      //     >
-      //       attendance
-      //     </a>
-      //   </div>
-      // </div>
     )
   }
 }

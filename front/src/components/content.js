@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons"
 import "../assets/css/App.css"
 import { NavLink } from "react-router-dom"
+
 class Content extends Component {
   shouldComponentUpdate(newProps, newState) {
     console.log(
