@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react"
+import React, { Component, useEffect, useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlusSquare } from "@fortawesome/free-solid-svg-icons"
 import "../assets/css/boardMain.css"
@@ -29,6 +29,10 @@ function Board(props) {
     i--
     num++
   }
+  useEffect(() => {
+    console.log("useEffect board")
+    return { boardContents }
+  }, [show])
 
   return (
     <div class="board-wrapper">
@@ -41,15 +45,20 @@ function Board(props) {
             <FontAwesomeIcon icon={faPlusSquare} />
           </NavLink>
         </div>
-        <div className="board_content">
-          {show ? (
+        {show ? (
+          <div className="board_content">
             <div className="board_container">{boardContents}</div>
-          ) : (
-            <Route path="/board/:topics_id">
-              <BoardDetail data={props.data} show={showChange}></BoardDetail>
-            </Route>
-          )}
-        </div>
+          </div>
+        ) : (
+          <Route path="/board/:topics_id">
+            <BoardDetail data={props.data} _show={showChange}></BoardDetail>
+          </Route>
+        )}
+
+        {/* <div className="board_container">{boardContents}</div>
+          <Route path="/board/:topics_id">
+            <BoardDetail data={props.data} _show={showChange}></BoardDetail>
+          </Route> */}
       </div>
     </div>
   )
