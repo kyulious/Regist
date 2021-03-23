@@ -74,30 +74,6 @@ const onSubmit = (data) => {
       {errors.password_confirm && errors.password_confirm.type === "required" && <p class="alert">비밀번호가 입력되지 않았습니다.</p>}
       {errors.password_confirm && errors.password_confirm.type === "validate" && <p class="alert">비밀번호가 일치하지 않습니다.</p>}
       <input type="submit" id="submit" value="가입하기"/>
-      <script>
-        var submit = 0;
-        $(function() {
-          $('#submit').click(function(){
-
-            var userid = $('.maininput').val();
-            $ajax({
-              type: "POST",
-              url:"", 
-              dataType : 'JSON',
-              contentType: 'application/JSON',
-              data: JSON.stringify(),
-              success: successCall,
-              error: errorCall  
-            });
-            function successCall() {
-              alert('회원가입이 완료되었습니다.');
-            };
-            function erorrCall(){
-              alert('회원가입에 실패하였습니다.');
-            };
-          })
-        });
-      </script>
     </form>
   );
 }
